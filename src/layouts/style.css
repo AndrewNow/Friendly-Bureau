@@ -1,0 +1,137 @@
+
+@font-face {
+    font-family: 'Happy Times Italic';
+    src: url('../fonts/happy-times-at-the-ikob_italic-webfont.woff2')
+    format('woff2');
+    font-weight: italic;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Telegraf Regular';
+    src: url('../fonts/telegraf-regular-webfont.woff2')
+    format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Telegraf Ultrabold';
+    src: url('../fonts/telegraf-ultrabold-webfont.woff2')
+    format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Telegraf Ultralight';
+    src: url('../fonts/telegraf-ultralight-webfont.woff2')
+    format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montreal Regular';
+    src: url('../fonts/neuemontreal-regular-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1, h2, th, button {
+    font-family: 'Telegraf Regular';
+}
+
+
+tr {
+    font-family: 'Telegraf Ultrabold';
+}
+
+p {
+    font-family: 'Telegraf Ultralight';
+}
+th {
+    font-size: 1.2em;
+    padding: .5em 0;
+}
+td, th {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+h2 {
+    font-size: 2rem;
+}
+.heythere {
+    margin-top: 6em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+footer {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    z-index: 4;
+    margin: 0;
+}
+footer h1 {
+    padding-top: 0.5em;
+    font-weight: 300;
+    font-size: 2em;
+}
+footer a {
+    font-size: 1.1em;
+    padding-bottom: 2em;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+.homeflexwrapper {
+    display: flex;
+}
+
+
+.misubackground {
+    /* background-image: url(../images/misu.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; */
+    /* display: block; */
+    /* width: 50%;
+    height: 50%; */
+    /* margin: 0 auto; */
+    position: fixed;
+    z-index: -1;
+    align-content: center;
+    display: flex;
+    width: auto;
+    /* border: 1px solid red; */
+
+    /* remove this for 2 column grid layout */
+
+}
+
+.misubackground img {
+    margin: 0 auto;
+    padding-top: 5rem;
+    width: 90%;
+}
+
+
+
+@media (max-width: 576px) {
+    .misubackground {
+        width: 90vw;
+        margin-top: 3rem;
+    }
+
+    .misubackground img {
+        margin: 0 auto;
+        width: 100vw;
+        height: auto;
+        position: relative;
+        display: block;
+        float: center;
+    }
+}
