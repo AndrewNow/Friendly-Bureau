@@ -88,6 +88,60 @@ export const CartTotalsWrapper = styled.table`
   }
 `
 
+export const CartFlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1px;
+  font-size: 1.6rem;
+  `
+
+export const CartHeadFlexContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-around;
+  border: 1px solid lightgrey;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1px;
+`
+export const ProductHeader = styled.div`
+  flex: 3;
+`
+export const ColorHeader = styled.div`
+  flex: 1;
+`
+export const QtyHeader = styled.div`
+  flex: 1;
+`
+
+export const PriceHeader = styled.div`
+  flex: 1;
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const CartTableHead = styled.thead`
   display: grid;
   position: relative;
@@ -103,6 +157,7 @@ export const CartTableHead = styled.thead`
     display: none;
   }
 `
+
 
 export const CartTableMobile = styled.table` 
   display: none; 
@@ -124,11 +179,6 @@ export const CartTableMobile = styled.table`
     border-top: 1px solid lightgray;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
-  }
-
-  & tr > img {
-    display: inline-block;
-    height: 300px;
   }
 
   & tr:nth-last-child(1) {
@@ -164,8 +214,7 @@ export const CartImage = styled.img`
   }
 `
 
-export const CartImageRowMobile = styled.tr`
-
+export const CartImageRowMobile = styled.tr`  
   @media only screen and (max-width: 320px) {
     /* height: 200px; */
   }

@@ -7,6 +7,12 @@ import {
   CartTableHead,
   CartTotalsWrapper,
   CheckoutButton,
+  CartFlexContainer,
+  CartHeadFlexContainer,
+  ProductHeader,
+  ColorHeader,
+  QtyHeader,
+  PriceHeader,
 } from './LineItem/styles.js'
 
 
@@ -26,7 +32,39 @@ const Cart = () => {
 
   return (
     <CartWrapper>
-    <h1>Cart</h1>
+      <h1>Cart</h1>
+
+      {/* <CartFlexContainer>
+        <CartHeadFlexContainer>
+          <ProductHeader>
+            <h2>Product</h2>
+          </ProductHeader>
+          <ColorHeader>
+            <h2>Color</h2>
+          </ColorHeader>
+          <QtyHeader>
+            <h2>Quantity</h2>
+          </QtyHeader>
+          <PriceHeader>
+            <h2>Price</h2>
+          </PriceHeader>
+        </CartHeadFlexContainer>
+          {line_items}
+      </CartFlexContainer>
+ */}
+
+
+{/* _______________________ */}
+
+
+
+
+<br />
+
+      
+
+
+
       <CartTableHead>
           <th></th>
           <th></th>
