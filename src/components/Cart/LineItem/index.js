@@ -16,7 +16,8 @@ import {
   ColorHeader,
   QtyHeader,
   MobileLineItemFlexContainer,
-  MobileFlexRow
+  MobileFlexRow,
+  MobileImageRow,
 } from './styles'
 import { Product } from '../../ProductGrid/styles'
 import ProductForm from '../../ProductForm/index.js'
@@ -130,7 +131,8 @@ const LineItem = props => {
           </div>
         </MobileFlexRow>
 
-        <MobileFlexRow>{variantImage}</MobileFlexRow>
+        <MobileImageRow>{variantImage}
+        </MobileImageRow>
 
         {line_item.variant.title === 'Default Title' ? null : (
           <MobileFlexRow>

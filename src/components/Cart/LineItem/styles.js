@@ -163,11 +163,12 @@ export const CartImage = styled.img`
   padding: 0.5rem;
   margin: 0 auto;
 
-  @media only screen and (max-width: 320px) {
+  /* @media only screen and (max-width: 320px) {
     height: 80vw;
     width: 80vw;
     padding: 0;
-  }
+  } */
+
   @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
     height: 80vw;
     width: 80vw;
@@ -203,6 +204,19 @@ export const MobileFlexRow = styled.div`
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
 }
+`
+
+export const MobileImageRow = styled.div`
+  display: none;
+  @media (max-width: ${breakpoints.l}px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    height: 80vw;
+  }
 `
 
 
