@@ -130,7 +130,7 @@ footer a:hover {
     .misubackground img {
         margin: 0 auto;
         width: 100%;
-        height: 100%;
+        height: 100% !important;
         position: relative;
         display: block;
         float: center;
