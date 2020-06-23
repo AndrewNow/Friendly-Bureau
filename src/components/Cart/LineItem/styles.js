@@ -141,6 +141,7 @@ export const CartTableMobile = styled.table`
 export const CartImage = styled.img`
   height: 80px;
   margin: 0 auto;
+  padding: .5em;
 
   /* @media (max-width: ${breakpoints.l}px){
     height: 200px;
