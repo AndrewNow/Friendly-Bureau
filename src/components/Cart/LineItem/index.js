@@ -6,6 +6,7 @@ import {
   CartButton,
   CartTableBody,
   CartTableMobile,
+  CartImageRowMobile,
   CartImage
 } from './styles'
 import { Product } from '../../ProductGrid/styles'
@@ -68,9 +69,9 @@ const LineItem = props => {
               : ''}</p>
               <CartButton onClick={handleRemove}>X</CartButton>
         </tr>
-        <th>
+        <CartImageRowMobile>
           {variantImage}
-        </th>
+        </CartImageRowMobile>
         {line_item.variant.title === 'Default Title' ? null :
           <tr>
             <p>Color:</p>

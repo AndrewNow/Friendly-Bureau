@@ -154,8 +154,18 @@ export const CartImage = styled.img`
   @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
     height: 240px;
   }
-
 `
+
+export const CartImageRowMobile = styled.tr`
+
+  @media only screen and (max-width: 320px) {
+    height: 200px;
+  }
+  @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
+    height: 240px;
+  }
+`
+
 
 export const CartTableBody = styled.tbody`
   display: grid;
