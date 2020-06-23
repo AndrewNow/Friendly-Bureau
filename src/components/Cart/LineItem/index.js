@@ -61,6 +61,10 @@ const LineItem = props => {
         <td><p>{line_item.variant.price}$</p></td>
       </CartTableBody>
 
+      
+
+
+      
       <CartTableMobile>
         <tr>
             <p>{line_item.title}  {selectedOptions[1]} {``}

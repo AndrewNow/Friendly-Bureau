@@ -126,6 +126,11 @@ export const CartTableMobile = styled.table`
     border-right: 1px solid lightgrey;
   }
 
+  & tr > img {
+    display: inline-block;
+    height: 300px;
+  }
+
   & tr:nth-last-child(1) {
     border-bottom: 1px solid lightgrey;
   }
