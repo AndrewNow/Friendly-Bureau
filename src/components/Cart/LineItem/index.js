@@ -7,7 +7,16 @@ import {
   CartTableBody,
   CartTableMobile,
   CartImageRowMobile,
-  CartImage
+  CartImage,
+  LineItemFlexContainer,
+  ImageHeader,
+  ProductHeader,
+  PriceHeader,
+  ButtonHeader,
+  ColorHeader,
+  QtyHeader,
+  MobileLineItemFlexContainer,
+  MobileFlexRow
 } from './styles'
 import { Product } from '../../ProductGrid/styles'
 import ProductForm from '../../ProductForm/index.js'
@@ -44,46 +53,133 @@ const LineItem = props => {
   }
   return (
     <Wrapper>
-      <CartTableBody>
-        <td><CartButton onClick={handleRemove}>X</CartButton></td>
+      <LineItemFlexContainer>
+        <ImageHeader>{variantImage}</ImageHeader>
+
+        <ProductHeader>
+          <p>
+            {line_item.title} {selectedOptions[1]} {``}
+            {line_item.variant.title === !'Default Title'
+              ? line_item.variant.title
+              : ''}
+          </p>
+        </ProductHeader>
+
+        {line_item.variant.title === 'Default Title' ? (
+          <ColorHeader />
+        ) : (
+          <ColorHeader>
+            <p>{selectedOptions[0]}</p>
+          </ColorHeader>
+        )}
+
+        <QtyHeader>
+          <p>{line_item.quantity}</p>
+        </QtyHeader>
+
+        <PriceHeader>
+          <p>{line_item.variant.price}$</p>
+        </PriceHeader>
+
+        <ButtonHeader>
+          <CartButton onClick={handleRemove}>X</CartButton>
+        </ButtonHeader>
+      </LineItemFlexContainer>
+
+      {/*<CartTableBody>
+        <td>
+          <CartButton onClick={handleRemove}>X</CartButton>
+        </td>
         <td>{variantImage}</td>
         <td>
-          <p>{line_item.title} {selectedOptions[1]} {``}
+          <p>
+            {line_item.title} {selectedOptions[1]} {``}
             {line_item.variant.title === !'Default Title'
               ? line_item.variant.title
-              : ''}</p>
+              : ''}
+          </p>
         </td>
-        {line_item.variant.title === 'Default Title' ? <p> </p> :
-          <td><p>{selectedOptions[0]}</p></td>
-        }
-        <td><p>{line_item.quantity}</p></td>
+        {line_item.variant.title === 'Default Title' ? (
+          <p> </p>
+        ) : (
+          <td>
+            <p>{selectedOptions[0]}</p>
+          </td>
+        )}
+        <td>
+          <p>{line_item.quantity}</p>
+        </td>
         {/* <td><button style={buttonStyle} onClick={handleRemove}>x</button></td> */}
-        <td><p>{line_item.variant.price}$</p></td>
-      </CartTableBody>
+      {/* <td>
+          <p>{line_item.variant.price}$</p>
+        </td>
+        </CartTableBody> */}
 
-      
-      
+      <MobileLineItemFlexContainer>
+        <MobileFlexRow>
+          <div>
+            <p>
+              {line_item.title} {selectedOptions[1]} {``}
+              {line_item.variant.title === !'Default Title'
+                ? line_item.variant.title
+                : ''}
+            </p>
+          </div>
+          <div>
+            <CartButton onClick={handleRemove}>X</CartButton>
+          </div>
+        </MobileFlexRow>
 
+        <MobileFlexRow>{variantImage}</MobileFlexRow>
 
+        {line_item.variant.title === 'Default Title' ? null : (
+          <MobileFlexRow>
+            <div>
+              <p>Color:</p>
+            </div>
+            <div>
+              <p>{selectedOptions[0]}</p>
+            </div>
+          </MobileFlexRow>
+        )}
 
-      <CartTableMobile>
+        <MobileFlexRow>
+          <div>
+            <p>Quantity:</p>
+          </div>
+          <div>
+            <p>{line_item.quantity} qty</p>
+          </div>
+        </MobileFlexRow>
+
+        <MobileFlexRow>
+          <div>
+            <p>Price:</p>
+          </div>
+          <div>
+            <p>{line_item.variant.price}$</p>
+          </div>
+        </MobileFlexRow>
+      </MobileLineItemFlexContainer>
+
+      {/* <CartTableMobile>
         <tr>
-            <p>{line_item.title}  {selectedOptions[1]} {``}
+          <p>
+            {line_item.title} {selectedOptions[1]} {``}
             {line_item.variant.title === !'Default Title'
               ? line_item.variant.title
-              : ''}</p>
-              <CartButton onClick={handleRemove}>X</CartButton>
+              : ''}
+          </p>
+          <CartButton onClick={handleRemove}>X</CartButton>
         </tr>
-        <CartImageRowMobile>
-          {variantImage}
-        </CartImageRowMobile>
-        {line_item.variant.title === 'Default Title' ? null :
+        <CartImageRowMobile>{variantImage}</CartImageRowMobile>
+        {line_item.variant.title === 'Default Title' ? null : (
           <tr>
             <p>Color:</p>
             <p>{selectedOptions[0]}</p>
           </tr>
-        }
-        {/* above: render null if the title = default title. else, render <tr/>  */}
+        )}
+        above: render null if the title = default title. else, render a <tr/>
         <tr>
           <p>Quantity:</p>
           <p>{line_item.quantity} qty</p>
@@ -92,23 +188,8 @@ const LineItem = props => {
           <p>Price:</p>
           <p>{line_item.variant.price}$</p>
         </tr>
-      </CartTableMobile>
-
-
-      {/* _______________________OLD CODE BELOW_________________________ */}
-      {/* {variantImage}
-      <p>
-        {line_item.title}
-        {``}
-        {line_item.variant.title === !'Default Title'
-          ? line_item.variant.title
-          : ''}
-      </p>
-      <p>{selectedOptions[0]}</p>
-      <p>{selectedOptions[1]} </p>
-      <p>{line_item.quantity}</p>
-      <p>{line_item.variant.price}$</p> */}
-      </Wrapper>
+      </CartTableMobile> */}
+    </Wrapper>
   )
 }
 export default LineItem

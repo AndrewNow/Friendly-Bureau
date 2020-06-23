@@ -31,7 +31,7 @@ export const CartWrapper = styled.div`
     width: 100%;
     padding-top: 3rem;
 
-      & div:nth-child(even) {
+      & span:nth-child(even) {
       margin-top: 1rem;
       background-color: rgba(0,0,0,.025);
 
@@ -96,43 +96,114 @@ export const CartFlexContainer = styled.div`
   position: relative;
   border-radius: 1px;
   font-size: 1.6rem;
-  `
+`
 
 export const CartHeadFlexContainer = styled.div`
   display: flex;
   flex-direction: row;
-  
-  justify-content: space-around;
   border: 1px solid lightgrey;
   width: 100%;
   margin: 0 auto;
   border-radius: 1px;
+  @media (max-width: ${breakpoints.l}px) {
+    font-size: 1rem;
+    display: none;
+  }
+`
+
+export const LineItemFlexContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  
+  align-items: center;
+
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-radius: 1px;
+  font-size: 1.6rem;
+  
+  @media (max-width: ${breakpoints.l}px) {
+    font-size: 1rem;
+    display: none;
+  }
+`
+
+export const ImageHeader = styled.div`
+  text-align: center;
+  flex: 1.5;
 `
 export const ProductHeader = styled.div`
-  flex: 3;
+  flex: 2;
+  align-items: center;
 `
 export const ColorHeader = styled.div`
-  flex: 1;
+  /* text-align: center; */
+  flex: 2;
 `
 export const QtyHeader = styled.div`
-  flex: 1;
+  text-align: center;
+  flex: 2;
 `
-
 export const PriceHeader = styled.div`
+  text-align: center;
   flex: 1;
+`
+export const ButtonHeader = styled.div`
+  text-align: center;
+  flex: 1.5;
+`
+
+export const CartImage = styled.img`
+  height: 80px;
+  width: 80px;
+  padding: 0.5rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 320px) {
+    height: 80vw;
+    width: 80vw;
+    padding: 0;
+  }
+  @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
+    height: 80vw;
+    width: 80vw;
+    padding: 0;
+  }
 `
 
 
+export const MobileLineItemFlexContainer = styled.span`
+  display: none;
 
+  @media (max-width: ${breakpoints.l}px) {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
 
+  & div > p {
+    font-size: .9rem;
+    margin: 0;
+  }
+}
+`
 
-
-
-
-
-
-
-
+export const MobileFlexRow = styled.div`
+  display: none;
+  @media (max-width: ${breakpoints.l}px) {
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+`
 
 
 
@@ -152,16 +223,14 @@ export const CartTableHead = styled.thead`
   border-radius: 1px;
   font-size: 1.6rem;
 
-  @media (max-width: ${breakpoints.l}px){
+@media(max-width: ${ breakpoints.l }px) {
     font-size: 1rem;
     display: none;
   }
 `
 
-
 export const CartTableMobile = styled.table` 
   display: none; 
-  
   @media (max-width: ${breakpoints.l}px){
     display: grid;
     font-size: 1rem;
@@ -179,9 +248,7 @@ export const CartTableMobile = styled.table`
     border-top: 1px solid lightgray;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
-  }
-
-  & tr:nth-last-child(1) {
+  }  & tr:nth-last-child(1) {
     border-bottom: 1px solid lightgrey;
   }
   & th {
@@ -193,26 +260,6 @@ export const CartTableMobile = styled.table`
   }
 `
 
-export const CartImage = styled.img`
-  display: inline-block;
-  height: 80px;
-  margin: 0 auto;
-  padding: .5em;
-
-  /* @media (max-width: ${breakpoints.l}px){
-    height: 200px;
-    margin: 0 auto;
-  } */
-  @media only screen and (max-width: 320px) {
-    height: 200px;
-    padding: 0;
-    
-  }
-  @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
-    height: 240px;
-    padding: 0;
-  }
-`
 
 export const CartImageRowMobile = styled.tr`  
   @media only screen and (max-width: 320px) {
@@ -235,7 +282,6 @@ export const CartTableBody = styled.tbody`
   border-right: 1px solid lightgrey;
   border-radius: 1px;
   font-size: 1.6rem;
-
   @media (max-width: ${breakpoints.l}px){
     font-size: 1rem;
     display: none;
