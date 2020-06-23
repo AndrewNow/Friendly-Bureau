@@ -162,7 +162,7 @@ export const CartImage = styled.img`
   width: 80px;
   padding: 0.5rem;
   margin: 0 auto;
-
+  display: inline-block;
   /* @media only screen and (max-width: 320px) {
     height: 80vw;
     width: 80vw;
@@ -215,7 +215,6 @@ export const MobileImageRow = styled.div`
     border-top: 1px solid lightgray;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
-    height: 80vw;
   }
 `
 
