@@ -139,6 +139,7 @@ export const CartTableMobile = styled.table`
 `
 
 export const CartImage = styled.img`
+  display: inline-block;
   height: 80px;
   margin: 0 auto;
   padding: .5em;
@@ -149,20 +150,22 @@ export const CartImage = styled.img`
   } */
   @media only screen and (max-width: 320px) {
     height: 200px;
+    padding: 0;
     
   }
   @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
     height: 240px;
+    padding: 0;
   }
 `
 
 export const CartImageRowMobile = styled.tr`
 
   @media only screen and (max-width: 320px) {
-    height: 200px;
+    /* height: 200px; */
   }
   @media only screen and (min-width: 320px) and (max-width: ${breakpoints.l}px) {
-    height: 240px;
+    /* height: 240px; */
   }
 `
 
