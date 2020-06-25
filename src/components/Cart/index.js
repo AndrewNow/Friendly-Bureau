@@ -60,20 +60,8 @@ const Cart = () => {
           <ButtonHeader />
           
         </CartHeadFlexContainer>
-          {line_items}
+        {line_items}
       </CartFlexContainer>
-
-
-
-{/* _______________________ */}
-
-
-
-
-<br />
-
-
-
 
       {/* <CartTableHead>
           <th></th>
@@ -86,11 +74,6 @@ const Cart = () => {
       {line_items} */}
 
 
-
-
-      
-
-      
         <h1>Total</h1>
       <CartTotalsWrapper>
         <tr>

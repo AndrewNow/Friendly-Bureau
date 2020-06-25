@@ -83,7 +83,7 @@ const LineItem = props => {
         </PriceHeader>
 
         <ButtonHeader>
-          <CartButton onClick={handleRemove}>X</CartButton>
+          <CartButton onClick={handleRemove}>x</CartButton>
         </ButtonHeader>
       </LineItemFlexContainer>
 

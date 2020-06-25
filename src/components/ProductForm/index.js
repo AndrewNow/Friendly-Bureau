@@ -107,7 +107,7 @@ const ProductForm = ({ product }) => {
         <React.Fragment key={id}>
           <Spacer>
             <DropDownWrapper>
-              <div>
+              {/* <div>
                 <label htmlFor="quantity">Quantity: </label>
                 <br />
                 <QuantityBoxStyled
@@ -119,7 +119,7 @@ const ProductForm = ({ product }) => {
                   onChange={handleQuantityChange}
                   value={quantity}
                 />
-              </div>
+              </div> */}
         
               <br />
               <Spacer />

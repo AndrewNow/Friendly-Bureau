@@ -18,39 +18,36 @@ export const CartWrapper = styled.div`
   padding-top: 7rem;
   margin: 0 auto;
   width: 80%;
-
+  background-color: white;
   & h1 {
     font-size: 3rem;
   }
-
   & h2 {
     font-size: 1.6rem;
   }
-  
-  @media (max-width: ${breakpoints.l}px){
+  @media (max-width: ${breakpoints.l}px) {
     width: 100%;
     padding-top: 3rem;
-
-      & span:nth-child(even) {
+    background-color: white;
+    
+    & span:nth-child(even) {
       margin-top: 1rem;
-      background-color: rgba(0,0,0,.025);
-
-        & button {
-          background-color: rgba(0,0,0,.005);
-          border: 1px solid rgba(0,0,0,.005)
-        }
+      background-color: rgba(0, 0, 0, 0.025);
+      & button {
+        background-color: rgba(0, 0, 0, 0.005);
+        border: 1px solid rgba(0, 0, 0, 0.005);
       }
-
-      & h1 {
-        font-size: 3rem;
-        margin-bottom: .7rem;
-      }
-      & h2 {
-        font-size: 1rem;
-      }
-      & p {
-        margin: 0;
-      }
+    }
+    & h1 {
+      font-size: 3rem;
+      margin-bottom: 0.7rem;
+    }
+    & h2 {
+      font-size: 1rem;
+    }
+    & p {
+      margin: 0;
+    }
   }
 `
 
@@ -96,6 +93,7 @@ export const CartFlexContainer = styled.div`
   position: relative;
   border-radius: 1px;
   font-size: 1.6rem;
+  background-color: white;
 `
 
 export const CartHeadFlexContainer = styled.div`
@@ -154,7 +152,7 @@ export const PriceHeader = styled.div`
 `
 export const ButtonHeader = styled.div`
   text-align: center;
-  flex: 1.5;
+  flex: 1;
 `
 
 export const CartImage = styled.img`
@@ -322,7 +320,7 @@ export const CartButton = styled.button`
   @media (max-width: ${breakpoints.l}px){
     color: #e71d36;
     width: 40px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
 `
