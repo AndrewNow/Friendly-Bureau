@@ -11,19 +11,26 @@ export const Grid = styled.div`
   /* padding-top: 12vh; */
 
   /* this was commented out before the misu image */
-  background-color: white; 
+  position: absolute;
+  right: 0;
   /* margin: 0 auto; */
-  width: 100%;
+  width: 39%;
+  margin-left: 10%;
   padding-top: 10vh;
+  
+  
   /* padding-right:  6rem; */
-  margin-left: 50vw;
+  /* margin-left: 50vw; */
   
   @media (max-width: ${breakpoints.s}px){
     grid-template-columns: repeat(1, 1fr);
+    position: static;
     margin-top: 27rem;
     padding: 0;
     margin-left: 0;
+    width: 100%;
     display: -moz-inline-grid;
+    background-color: white;
   }
 `
 

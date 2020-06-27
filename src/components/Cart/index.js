@@ -88,10 +88,10 @@ const Cart = () => {
           <p>Shipping:</p>
           <p>$ {checkout.shipping} </p>
         </tr> */}
-        <tr>
+        {/* <tr>
           <p>Total:</p>
           <p>$ {checkout.totalPrice}</p>
-        </tr>
+        </tr> */}
         <tr>
           <p>Shipping and taxes will be calculated at checkout!</p>
         </tr>

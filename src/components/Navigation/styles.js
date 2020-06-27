@@ -28,15 +28,12 @@ export const Container = styled.div`
 export const MenuLink = styled(Link)`
   //border: 2px solid red;
   //color: #29BF12;
-
   margin: .1em;
-
 
   mix-blend-mode: difference;
   color: black;
   text-decoration: none;
   font-weight: 300;
-
 
   @media only screen and (max-width: ${breakpoints.s}px) {
     font-size: 1.1rem;

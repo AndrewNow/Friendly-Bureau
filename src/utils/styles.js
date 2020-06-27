@@ -99,7 +99,7 @@ export const TwoColumnGrid = styled.div`
 
 export const GridLeft = styled.div`
   grid-area: left;
-  margin-left: 5em;
+  margin-left: 3vw;
   margin-top: 7em;
   padding: 4em;
 
@@ -117,10 +117,11 @@ export const GridRight = styled.div`
   border: 1px solid black;
   padding: 2em;
   grid-area: right;
-  margin-top: 20em;
+  margin-bottom: 8em;
   position: absolute;
   width: 30%;
   left: 60%;
+  bottom: 0;
   animation-name: colorshadow;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
@@ -152,7 +153,20 @@ box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
   }
 
 
-    @media (max-width: ${breakpoints.l}px){
+    @media (max-width: ${breakpoints.m}px){
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: static;
+    width: 100%;
+  
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    animation: none;
+  
+  }
+  @media (max-width: ${breakpoints.l}px){
     border: none;
     padding: 0;
     margin: 0;
