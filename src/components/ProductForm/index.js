@@ -121,8 +121,8 @@ const ProductForm = ({ product }) => {
                 />
               </div> */}
         
-              <br />
-              <Spacer />
+              {/* <br />
+              <Spacer /> */}
               
               <div>
                 {name !== 'Title' &&
