@@ -111,6 +111,7 @@ export const GridLeft = styled.div`
 `
 
 export const GridRight = styled.div`
+  background-color: white;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;

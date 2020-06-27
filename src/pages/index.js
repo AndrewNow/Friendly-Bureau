@@ -8,7 +8,7 @@ import SEO from '~/components/seo'
 import ProductGrid from '~/components/ProductGrid'
 const IndexPage = () => (
   <>
-    <SEO title="Home" keywords={[`Montreal clothing brand`, `montreal graphic design`, `react`]} />
+    <SEO title="Home" keywords={[`Montreal clothing brand`, `friendlybureau`, `toronto clothing brand`, `local screenprint`, `friendly bureau store`, `friendlybureau store`, `montreal graphic design`, `react`]} />
 
     <div className="homeflexwrapper">
       <div className="misubackground">

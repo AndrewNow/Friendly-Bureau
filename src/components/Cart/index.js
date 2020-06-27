@@ -46,7 +46,7 @@ const Cart = () => {
           </ProductHeader>
 
           <ColorHeader>
-            <h2>Color</h2>
+            <h2>Details</h2>
           </ColorHeader>
 
           <QtyHeader>

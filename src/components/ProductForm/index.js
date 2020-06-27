@@ -172,7 +172,6 @@ const ProductForm = ({ product }) => {
       >
         Add to Cart
       </CartButton>
-
       {!available && <p>This product is out of stock!</p>}
     </>
   )

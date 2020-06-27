@@ -67,7 +67,9 @@ const LineItem = props => {
         </ProductHeader>
 
         {line_item.variant.title === 'Default Title' ? (
-          <ColorHeader />
+          <ColorHeader>
+            <p>One Size</p>
+          </ColorHeader>
         ) : (
           <ColorHeader>
             <p>{selectedOptions[0]}</p>

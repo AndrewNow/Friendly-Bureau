@@ -29,6 +29,7 @@ export const MenuLink = styled(Link)`
   //border: 2px solid red;
   //color: #29BF12;
   margin: .1em;
+  -webkit-text-stroke: 1px solid white;
 
   mix-blend-mode: difference;
   color: black;
