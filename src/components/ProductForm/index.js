@@ -105,7 +105,6 @@ const ProductForm = ({ product }) => {
       <h3>{price}</h3>
       {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
-          <Spacer>
             <DropDownWrapper>
               {/* <div>
                 <label htmlFor="quantity">Quantity: </label>
@@ -126,10 +125,11 @@ const ProductForm = ({ product }) => {
               
               <div>
                 {name !== 'Title' &&
-                  <label htmlFor={name}>{name}: </label>
+                  <label htmlFor={name}>{name}:
+                <br />
+                </label>
                   /* prevent label "title" from rendering to prevent default */
                 }
-                <br />
                 {values.length > 1 &&
                   /* prevent dropdown menu from appearing unless there are  more than 1 option */
                   <DropDown
@@ -148,7 +148,6 @@ const ProductForm = ({ product }) => {
                 }
               </div>
             </DropDownWrapper>
-          </Spacer>
         </React.Fragment>
       ))}    
 
@@ -174,7 +173,7 @@ const ProductForm = ({ product }) => {
         Add to Cart
       </CartButton>
 
-      {!available && <p>This Product is out of Stock!</p>}
+      {!available && <p>This product is out of stock!</p>}
     </>
   )
 }
