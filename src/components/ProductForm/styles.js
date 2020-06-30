@@ -69,7 +69,27 @@ export const CartButton = styled.button`
     transition: 0.3s;
     &:hover, 
     :focus {
-        background-color: #97CC04;
+        background-color: white;
+        color: black;
+    }
+
+@media (max-width: ${breakpoints.l}px){
+    animation-name: colorshadow;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    
+    @keyframes colorshadow  {
+    from {-webkit-box-shadow: 0px 0px 25px -0px rgba(200,255,0,0.28);
+    -moz-box-shadow: 0px 0px 25px -0px rgba(200,255,0,0.28);
+    box-shadow: 0px 0px 25px -0px rgba(200,255,0,0.28);}    
+    to {
+    -webkit-box-shadow: 0px 0px 25px -9px rgba(0,212,235,0.62);
+    -moz-box-shadow: 0px 0px 25px -9px rgba(0,212,235,0.62);
+    box-shadow: 0px 0px 25px -9px rgba(0,212,235,0.62);
+    }
     }
 `
 
