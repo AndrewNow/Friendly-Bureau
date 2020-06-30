@@ -50,6 +50,13 @@ tr {
 p {
     font-family: 'Telegraf Ultralight';
 }
+
+p span {
+    line-height: 1.3;
+}
+
+
+
 th {
     font-size: 1.2em;
     padding: .5em 0;
