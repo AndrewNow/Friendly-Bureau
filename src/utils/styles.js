@@ -100,9 +100,9 @@ export const TwoColumnGrid = styled.div`
 export const GridLeft = styled.div`
   grid-area: left;
   margin-left: 3vw;
-  margin-top: 7em;
-  padding: 4em;
-
+  margin-top: 7vh;
+  padding: 4vw; 
+  width: 90%;
     @media (max-width: ${breakpoints.l}px){
     margin-top: 5em;
     margin-left: 0;
@@ -111,13 +111,14 @@ export const GridLeft = styled.div`
 `
 
 export const GridRight = styled.div`
+  grid-area: right;
   background-color: white;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border: 1px solid black;
+
   padding: 2em;
-  grid-area: right;
   margin-bottom: 4em;
   position: fixed;
   width: 30%;
