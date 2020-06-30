@@ -123,7 +123,7 @@ export const GridRight = styled.div`
   width: 30%;
   left: 60%;
   /* top: 35vh; */
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
 
 
@@ -137,21 +137,19 @@ export const GridRight = styled.div`
 -moz-box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28);
 box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28); */
 
+  @keyframes colorshadow  {
+    from {-webkit-box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);
+  -moz-box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);
+  box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);}
+
+    to {
+  -webkit-box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
+  -moz-box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
+  box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
+    }
 
 
-@keyframes colorshadow  {
-  from {-webkit-box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);
--moz-box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);
-box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);}
-
-  to {
--webkit-box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
--moz-box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
-box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
   }
-
-
-}
 
   & * {
     font-family: 'Telegraf Regular';
@@ -159,6 +157,8 @@ box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
 
 
     @media (max-width: ${breakpoints.m}px){
+    top: 0;
+    transform: none;
     border: none;
     padding: 0;
     margin: 0;
@@ -172,6 +172,8 @@ box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
   
   }
   @media (max-width: ${breakpoints.l}px){
+    top: 0;
+    transform: none;
     border: none;
     padding: 0;
     margin: 0;
