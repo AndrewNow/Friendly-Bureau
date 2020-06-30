@@ -100,13 +100,24 @@ export const TwoColumnGrid = styled.div`
 export const GridLeft = styled.div`
   grid-area: left;
   margin-left: 3vw;
-  margin-top: 7vh;
+  margin-top: 5vh;
   padding: 4vw; 
-  width: 90%;
-    @media (max-width: ${breakpoints.l}px){
-    margin-top: 5em;
-    margin-left: 0;
-    padding: 0;
+  width: 80%;
+
+    @media (min-width: ${breakpoints.m}px){
+      width: 100%;
+      margin-top: 5em;
+      margin-left: 0;
+      padding: 0;
+  }
+
+  @media (max-width: ${breakpoints.l}px) {
+    width: 100%;
+      margin-top: 5em;
+      margin-left: 0;
+      padding: 0;
+
+      border: 1px solid red;
   }
 `
 
@@ -120,10 +131,11 @@ export const GridRight = styled.div`
 
   padding: 2em;
   margin-bottom: 4em;
-  position: fixed;
+  /* top: 35vh; */
+  /* position: fixed; */
+  position: absolute;
   width: 30%;
   left: 60%;
-  /* top: 35vh; */
   top: 55%;
   transform: translateY(-50%);
 

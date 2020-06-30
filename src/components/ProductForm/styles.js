@@ -18,10 +18,9 @@ export const DropDownWrapper = styled.div`
 `
 
 export const DropDown = styled.select`
-
     font-family: 'Telegraf Regular';
     height: 35px;
-    width: 190px;
+    width: 200px;
     margin-top: .3rem;
     border-radius: 2px;
     border: 1px solid black;
@@ -67,6 +66,7 @@ export const CartButton = styled.button`
     background-color: black;
     color: white;
     transition: 0.3s;
+    margin: .4em 0;
     &:hover, 
     :focus {
         background-color: white;
@@ -81,7 +81,7 @@ export const CartButton = styled.button`
     animation-iteration-count: infinite;
     color: black;
     background-color: white;
-    
+
     &:hover, 
     :focus {
         background-color: black;
@@ -97,6 +97,7 @@ export const CartButton = styled.button`
     -moz-box-shadow: 0px 0px 25px -9px rgba(0,212,235,0.62);
     box-shadow: 0px 0px 25px -9px rgba(0,212,235,0.62);
         }
+    }
     }
 }
 `
