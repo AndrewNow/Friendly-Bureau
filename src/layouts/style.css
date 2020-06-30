@@ -120,8 +120,14 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
+    .homeflexwrapper {
+        display: block;
+    }
     .misubackground {
-        width: 90%;
+        position: static;
+        display: inline-block;
+        z-index: 1;
+        width: 100%;
         height: auto;
         padding-top: 3rem;
     }

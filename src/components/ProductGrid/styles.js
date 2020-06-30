@@ -14,7 +14,8 @@ export const Grid = styled.div`
   position: absolute;
   right: 0;
   /* margin: 0 auto; */
-  width: 39%;
+  /* width: 39%; */
+  width: 42%;
   margin-left: 10%;
   padding-top: 10vh;
   
@@ -25,7 +26,7 @@ export const Grid = styled.div`
   @media (max-width: ${breakpoints.s}px){
     grid-template-columns: repeat(1, 1fr);
     position: static;
-    margin-top: 27rem;
+    /* margin-top: 27rem; */
     padding: 0;
     margin-left: 0;
     width: 100%;
