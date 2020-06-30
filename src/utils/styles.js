@@ -122,7 +122,9 @@ export const GridRight = styled.div`
   position: fixed;
   width: 30%;
   left: 60%;
-  top: 35vh;
+  /* top: 35vh; */
+  top: 50%;
+  transform: translateY(-50%);
 
 
   animation-name: colorshadow;
