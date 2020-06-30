@@ -118,11 +118,13 @@ export const GridRight = styled.div`
   border: 1px solid black;
   padding: 2em;
   grid-area: right;
-  margin-bottom: 8em;
-  position: absolute;
+  margin-bottom: 4em;
+  position: fixed;
   width: 30%;
   left: 60%;
-  bottom: 0;
+  top: 5em;
+
+
   animation-name: colorshadow;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
