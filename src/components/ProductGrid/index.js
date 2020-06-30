@@ -72,7 +72,8 @@ const ProductGrid = () => {
             </Link>
             <TitleFlexWrapper>
               <Title>{title} </Title>
-              <PriceTag>{getPrice(firstVariant.price)}</PriceTag>  
+              <PriceTag>{firstVariant.price}</PriceTag> 
+              {/* <PriceTag>{getPrice(firstVariant.price)}</PriceTag>   */}
             </TitleFlexWrapper>
           </Product>
         ))

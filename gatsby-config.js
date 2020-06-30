@@ -49,7 +49,7 @@ module.exports = {
         // 'gatsby-source-shopify-test-shop.myshopify.com'.
         //shopName: process.env.SHOP_NAME,
         //
-        shopName: 'friendly-bureau',
+        shopName: 'the-friendly-bureau',
 
         // An API access token to your Shopify shop. This is required.
         // You can generate an access token in the "Manage private apps" section
@@ -59,9 +59,10 @@ module.exports = {
         // See: https://help.shopify.com/api/custom-storefronts/storefront-api/getting-started#authentication
         //accessToken: process.env.f6964a4026207c3a036c30a3fdf6cd9b,
 
-        //get from: https://friendly-bureau.myshopify.com/admin/apps/private
+        //get from: https://the-friendly-bureau.myshopify.com/admin/apps/private
         //accessToken: process.env.SHOPIFY_STOREFRONT_API_TOKEN,
-        accessToken: 'f6964a4026207c3a036c30a3fdf6cd9b',
+        accessToken: 'ca4dfaf4ed02c6876ec2e0adc8505d16',
+        // accessToken: 'f6964a4026207c3a036c30a3fdf6cd9b',
         // Set verbose to true to display a verbose output on `npm run develop`
         // or `npm run build`. This prints which nodes are being fetched and how
         // much time was required to fetch and process the data.
