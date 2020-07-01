@@ -143,10 +143,7 @@ export const GridRight = styled.div`
   animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  
-/* -webkit-box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28);
--moz-box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28);
-box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28); */
+
 
   @keyframes colorshadow  {
     from {-webkit-box-shadow: 0px 0px 40px -0px rgba(200,255,0,0.28);
@@ -186,6 +183,7 @@ box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28); */
         font-size: 1.2rem;
       }
     }
+    /* ^ media queries for the description box */
 
     @media (max-width: ${breakpoints.l}px){
     font-size: inherit;
@@ -196,13 +194,12 @@ box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28); */
     margin: 0;
     position: static;
     width: 100%;
-
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     animation: none;
   }
-
+  /* ^ media queries for mobile */
 `
 
 export const MainContent = styled.main`
