@@ -135,7 +135,7 @@ export const ImageHeader = styled.div`
   flex: 1.5;
 `
 export const ProductHeader = styled.div`
-  flex: 2;
+  flex: 2.5;
   align-items: center;
 `
 export const ColorHeader = styled.div`

@@ -29,8 +29,7 @@ const Navigation = ({ siteTitle }) => {
 				<MenuLink to='/cart'>
 					{hasItems &&
 						<CartCounter>
-						{/* ( {quantity} ) */}
-							Shopping bag ({quantity})
+						Shopping bag ({quantity})
 						</CartCounter>
 					}
 					{/* Shopping bag ({quantity}) */}
