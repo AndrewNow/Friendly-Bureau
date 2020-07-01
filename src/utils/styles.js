@@ -37,7 +37,7 @@ export const Img = styled(Image)`
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 
-  //border: 2px solid #000000;
+ // border: 3px dotted #000000;
   // -webkit-box-shadow: 0px 0px 19px 0px rgba(171,255,79,0.61);
   // -moz-box-shadow: 0px 0px 19px 0px rgba(171,255,79,0.61);
   // box-shadow: 0px 0px 19px 0px rgba(171,255,79,0.61);
@@ -100,24 +100,22 @@ export const TwoColumnGrid = styled.div`
 export const GridLeft = styled.div`
   grid-area: left;
   margin-left: 3vw;
-  margin-top: 5vh;
-  padding: 4vw; 
-  width: 80%;
-
-    @media (min-width: ${breakpoints.m}px){
-      width: 100%;
-      margin-top: 5em;
-      margin-left: 0;
-      padding: 0;
-  }
+  padding: 2vw; 
+  position: absolute;
+  width: 40vw;
+  left: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  
 
   @media (max-width: ${breakpoints.l}px) {
+    position: static;
     width: 100%;
-      margin-top: 5em;
-      margin-left: 0;
-      padding: 0;
-
-      border: 1px solid red;
+    margin-top: 5em;
+    margin-left: 0;
+    padding: 0;
+    top: 0;
+    transform: none;
   }
 `
 
@@ -132,15 +130,13 @@ export const GridRight = styled.div`
   padding: 2em;
   margin-bottom: 4em;
   margin-top: 6em;
-  top: 20vh;
-  /* top: 35vh; */
-  /* position: fixed; */
+  top: 18vh;
+
   position: absolute;
   width: 30%;
   left: 60%;
   /* top: 55%;
   transform: translateY(-50%); */
-
 
   animation-name: colorshadow;
   animation-duration: 2s;
@@ -162,16 +158,37 @@ box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28); */
   -moz-box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
   box-shadow: 0px 0px 40px -9px rgba(0,212,235,0.62);
     }
-
-
   }
 
   & * {
     font-family: 'Telegraf Regular';
   }
+  
+    @media (max-width: 1750px){
+      font-size: 14px;
+      top: 15vh;
 
+      & h1 {
+        font-size: 1.9rem;
+      }
+      & h3 {
+        font-size: 1.2rem;
+      }
+    }
 
-    @media (max-width: ${breakpoints.m}px){
+    @media (max-width: 1350px){
+      font-size: 14px;
+      top: 7vh;
+      & h1 {
+        font-size: 1.8rem;
+      }
+      & h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: ${breakpoints.l}px){
+    font-size: inherit;
     top: 0;
     transform: none;
     border: none;
@@ -179,28 +196,13 @@ box-shadow: 0px 0px 55px -1px rgba(200,255,0,0.28); */
     margin: 0;
     position: static;
     width: 100%;
-  
+
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     animation: none;
-  
   }
-  @media (max-width: ${breakpoints.l}px){
-    top: 0;
-    transform: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    position: static;
-    width: 100%;
-  
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    animation: none;
-  
-  }
+
 `
 
 export const MainContent = styled.main`

@@ -53,7 +53,7 @@ const ProductGrid = () => {
 
   
   const getPrice = price => Intl.NumberFormat(undefined, {
-    currency: checkout.currencyCode ? checkout.currencyCode : 'EUR',
+    currency: checkout.currencyCode ? checkout.currencyCode : 'USD',
     minimumFractionDigits: 2,
     style: 'currency',
   }).format(parseFloat(price ? price : 0))
@@ -70,10 +70,11 @@ const ProductGrid = () => {
                   alt={handle}
                 />)}
             </Link>
+            {/* this is where the home screen image gets linked to the product */}
             <TitleFlexWrapper>
-              <Title>{title} </Title>
-              <PriceTag>{firstVariant.price}</PriceTag> 
-              {/* <PriceTag>{getPrice(firstVariant.price)}</PriceTag>   */}
+              <Title>{title}</Title>
+              {/* <PriceTag>{firstVariant.price}</PriceTag>  */}
+              <PriceTag>{getPrice(firstVariant.price)}</PriceTag>   
             </TitleFlexWrapper>
           </Product>
         ))
