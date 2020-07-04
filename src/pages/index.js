@@ -44,11 +44,14 @@ import "../layouts/style.css";
 import { GridWrapper } from "../components/ProductGrid/styles.js";
 import SEO from "~/components/seo";
 import ProductGrid from "~/components/ProductGrid";
+import misu from '../../images/misu.jpg'
+import misu2 from '../../images/misu2.jpg'
+
 
 const IndexPage = () => {
   const arrayOfImages = [
-    '../images/misu.jpg',
-    '../images/misu2.jpg'
+    misu,
+    misu2
   ];
 
   const [currentImage, setCurrentImage] = useState("");
