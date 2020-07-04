@@ -10,7 +10,7 @@ function getImage() {
     '/images/misu.jpg',
     '/images/misu2.jpg'
   ];
-  let rand = Math.floor(Math.random() * (randomImages.length - 0) + 0)
+  let rand = Math.floor(Math.random() * (randomImages.length))
   return (
     <img src={randomImages[rand]} alt="misu header photo"></img>
   );
