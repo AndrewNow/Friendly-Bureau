@@ -7,8 +7,8 @@ import ProductGrid from '~/components/ProductGrid'
 
 function getImage() {
   let randomImages = [
-    '/images/misu.jpg',
-    '/images/misu2.jpg'
+    '../images/misu.jpg',
+    '../images/misu2.jpg'
   ];
   let rand = Math.floor(Math.random() * (randomImages.length))
   return (
@@ -26,9 +26,9 @@ const IndexPage = () => (
       <ProductGrid />
     </div>
     {/* <div class="heythere">
-  <h1>Hey there 👋</h1>
-  <p>Welcome to Friendly bureau.</p>
-</div> */}
+      <h1>Hey there 👋</h1>
+      <p>Welcome to Friendly bureau.</p>
+    </div> */}
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </>
 )
