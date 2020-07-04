@@ -15,6 +15,7 @@ function getImage() {
     <img src={randomImages[rand]} alt="misu header photo"></img>
   );
 }
+
 const IndexPage = () => (
   <>
     <SEO title="Home" keywords={[`Montreal clothing brand, friendlybureau, toronto clothing brand, local screenprint, friendly bureau store, friendlybureau store, montreal graphic design, react`]} />
