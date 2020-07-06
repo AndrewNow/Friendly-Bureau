@@ -45,13 +45,23 @@ import { GridWrapper } from "../components/ProductGrid/styles.js";
 import SEO from "~/components/seo";
 import ProductGrid from "~/components/ProductGrid";
 import misu from '../images/misu.jpg'
-import misu2 from '../images/misu2.jpg'
+import annoying from '../images/annoying.jpg'
+import drinking from '../images/drinking.jpg'
+import eating from '../images/eating.jpg'
+import greeting from '../images/greeting.jpg'
+import sleeping from '../images/sleeping.jpg'
+import talking from '../images/talking.jpg'
 
 
 const IndexPage = () => {
   const arrayOfImages = [
     misu,
-    misu2,
+    annoying,
+    drinking,
+    eating,
+    greeting,
+    sleeping, 
+    talking
   ];
 
   const [currentImage, setCurrentImage] = useState("");
