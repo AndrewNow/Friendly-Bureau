@@ -101,12 +101,17 @@ export const GridLeft = styled.div`
   grid-area: left;
   margin-left: 3vw;
   padding: 2vw; 
-  position: absolute;
+  position: relative;
   width: 40vw;
   left: 0;
   top: 55%;
   transform: translateY(-50%);
+
   
+  /* & :nth-child(1) {
+    top: 55%;
+    transform: translateY(-50%);
+  } */
 
   @media (max-width: ${breakpoints.l}px) {
     position: static;
@@ -132,7 +137,7 @@ export const GridRight = styled.div`
   margin-top: 6em;
   top: 18vh;
 
-  position: absolute;
+  position: fixed;
   width: 30%;
   left: 60%;
   /* top: 55%;

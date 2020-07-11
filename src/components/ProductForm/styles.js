@@ -81,7 +81,6 @@ export const CartButton = styled.button`
     animation-iteration-count: infinite;
     color: black;
     background-color: white;
-
     &:hover, 
     :focus {
         background-color: black;
@@ -101,7 +100,6 @@ export const CartButton = styled.button`
     }
 }
 `
-
 
 export const Spacer = styled.div`
     padding: .5em 0;
