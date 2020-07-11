@@ -22,7 +22,7 @@ export const DropDown = styled.select`
     height: 35px;
     width: 200px;
     margin-top: .3rem;
-    padding-left: 1rem;
+    padding-left: .5rem;
     border-radius: 2px;
     border: 1px solid black;
     transition: 0.3s;
