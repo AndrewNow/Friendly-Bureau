@@ -15,7 +15,6 @@ import talking from '../images/talking.jpg'
 
 const IndexPage = () => {
   const arrayOfImages = [
-    misu,
     annoying,
     drinking,
     eating,

@@ -6,11 +6,9 @@ export const DropDownWrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-
     & * {
         font-family: 'Telegraf Regular';
     }
-    
     
     @media (max-width: ${breakpoints.s}px){
         flex-direction: column;    

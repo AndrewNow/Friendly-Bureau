@@ -150,7 +150,6 @@ const ProductForm = ({ product }) => {
             </DropDownWrapper>
         </React.Fragment>
       ))}    
-
       {/* <Spacer>
         <label htmlFor="quantity">Quantity: </label>
         <QuantityBoxStyled
@@ -163,7 +162,6 @@ const ProductForm = ({ product }) => {
           value={quantity}
         />
       </Spacer> */}
-
       <br />
       <CartButton
         type="submit"
