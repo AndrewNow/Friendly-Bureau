@@ -100,6 +100,7 @@ export const TwoColumnGrid = styled.div`
 export const GridLeft = styled.div`
   grid-area: left;
   margin-left: 3vw;
+  margin-top: 1.7rem;
   padding: 2vw; 
   position: relative;
   width: 40vw;
