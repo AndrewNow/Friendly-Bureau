@@ -75,7 +75,7 @@ const ProductGrid = () => {
               {/* this is where the home screen image gets linked to the product */}
               <TitleFlexWrapper>
                 <Title>{title}</Title>
-                {firstVariant.availableForSale ? <PriceTag>{getPrice(firstVariant.price)}</PriceTag> : <PriceTag>Sold out!</PriceTag> }     
+                {firstVariant.availableForSale ? <PriceTag>{getPrice(firstVariant.price)}</PriceTag> : <PriceTag><em>Sold out!</em></PriceTag> }     
               </TitleFlexWrapper>
             </Product>
           )
