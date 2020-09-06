@@ -41,6 +41,7 @@ const ProductGrid = () => {
               }
               variants {
                 price
+                availableForSale
               }
             }
           }
@@ -60,27 +61,25 @@ const ProductGrid = () => {
   return (
     <Grid>
       {allShopifyProduct.edges
-        ? allShopifyProduct.edges.map(({ node: { id, handle, title, images: [firstImage], variants: [firstVariant] } }) => (
-          <Product key={id} >
-            <Link to={`/product/${handle}/`}>
-              {firstImage && firstImage.localFile &&
-                (<Img
-                  fluid={firstImage.localFile.childImageSharp.fluid}
-                  alt={handle}
-                />)}
-            </Link>
-            {/* this is where the home screen image gets linked to the product */}
-            <TitleFlexWrapper>
-              <Title>{title}</Title>
-              {/* <PriceTag>{firstVariant.price}</PriceTag>  */}
-
-              {/* {!available ? null : <PriceTag>{getPrice(firstVariant.price)}</PriceTag>}    */}
-              
-
-              <PriceTag>{getPrice(firstVariant.price)}</PriceTag>   
-            </TitleFlexWrapper>
-          </Product>
-        ))
+        ? allShopifyProduct.edges.map(({ node: { id, handle, title, images: [firstImage], variants: [firstVariant] } }) => {
+          console.log(firstVariant.availableForSale)
+          return (
+            <Product key={id} >
+              <Link to={`/product/${handle}/`}>
+                {firstImage && firstImage.localFile &&
+                  (<Img
+                    fluid={firstImage.localFile.childImageSharp.fluid}
+                    alt={handle}
+                  />)}
+              </Link>
+              {/* this is where the home screen image gets linked to the product */}
+              <TitleFlexWrapper>
+                <Title>{title}</Title>
+                {firstVariant.availableForSale ? <PriceTag>{getPrice(firstVariant.price)}</PriceTag> : <PriceTag>Sold out!</PriceTag> }     
+              </TitleFlexWrapper>
+            </Product>
+          )
+        })
         : <p>No Products found!</p>}
     </Grid>
   )

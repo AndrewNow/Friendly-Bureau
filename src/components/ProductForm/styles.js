@@ -87,16 +87,10 @@ export const SoldOutButton = styled.button`
 
 @media (max-width: ${breakpoints.l}px){
     outline: 1px solid transparent;
-    animation: shake .8s;
+    animation: shake .3s;
     animation-iteration-count: infinite;
     background-color: black;
-    color: white;
-    &:hover, 
-    :focus {
-        background-color: white;
-        color: black;
-    }
-    
+    color: white;    
 }
 `
 export const CartButton = styled.button`
