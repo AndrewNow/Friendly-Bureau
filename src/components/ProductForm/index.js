@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {
   DropDown,
   CartButton,
+  SoldOutButton,
   QuantityBoxStyled,
   Spacer,
   DropDownWrapper,
@@ -105,8 +106,8 @@ const ProductForm = ({ product }) => {
       <h3>{price}</h3>
       {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
-            <DropDownWrapper>
-              {/* <div>
+          <DropDownWrapper>
+            {/* <div>
                 <label htmlFor="quantity">Quantity: </label>
                 <br />
                 <QuantityBoxStyled
@@ -119,37 +120,41 @@ const ProductForm = ({ product }) => {
                   value={quantity}
                 />
               </div> */}
-        
-              {/* <br />
+
+            {/* <br />
               <Spacer /> */}
-              
-              <div>
-                {name !== 'Title' &&
-                  <label htmlFor={name}>{name}:
-                <br />
+
+            <div>
+              {name !== 'Title' && (
+                <label htmlFor={name}>
+                  {name}:
+                  <br />
                 </label>
-                  /* prevent label "title" from rendering to prevent default */
-                }
-                {values.length > 1 &&
-                  /* prevent dropdown menu from appearing unless there are  more than 1 option */
-                  <DropDown
-                    name={name}
-                    key={id}
-                    onChange={event => handleOptionChange(index, event)}>
-                    {values.map(value => (
-                      <option
-                        value={value}
-                        key={`${name}-${value}`}
-                        disabled={checkDisabled(name, value)}>
-                        {value}
-                      </option>
-                    ))}
-                  </DropDown>
-                }
-              </div>
-            </DropDownWrapper>
+              )
+              /* prevent label "title" from rendering to prevent default */
+              }
+              {values.length > 1 && (
+                /* prevent dropdown menu from appearing unless there are  more than 1 option */
+                <DropDown
+                  name={name}
+                  key={id}
+                  onChange={event => handleOptionChange(index, event)}
+                >
+                  {values.map(value => (
+                    <option
+                      value={value}
+                      key={`${name}-${value}`}
+                      disabled={checkDisabled(name, value)}
+                    >
+                      {value}
+                    </option>
+                  ))}
+                </DropDown>
+              )}
+            </div>
+          </DropDownWrapper>
         </React.Fragment>
-      ))}    
+      ))}
       {/* <Spacer>
         <label htmlFor="quantity">Quantity: </label>
         <QuantityBoxStyled
@@ -163,14 +168,24 @@ const ProductForm = ({ product }) => {
         />
       </Spacer> */}
       <br />
-      <CartButton
-        type="submit"
-        disabled={!available || adding}
-        onClick={handleAddToCart}
-      >
-        Add to Cart
-      </CartButton>
-      {!available && <h3>This product is out of stock!</h3>}
+
+      {!available ? (
+        <SoldOutButton
+          type="submit"
+          disabled={!available || adding}
+          onClick={handleAddToCart}
+        >
+          Out of Stock!
+        </SoldOutButton>
+      ) : (
+        <CartButton
+          type="submit"
+          disabled={!available || adding}
+          onClick={handleAddToCart}
+        >
+          Add to Cart
+        </CartButton>
+      )}
     </>
   )
 }

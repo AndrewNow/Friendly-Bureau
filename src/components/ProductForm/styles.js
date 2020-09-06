@@ -55,7 +55,50 @@ export const QuantityBoxStyled = styled.input`
         outline: none;
     }
 `
+export const SoldOutButton = styled.button`
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+    height: 45px;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    margin: .4em 0;
+    &:hover,
+    :focus {
+        animation: shake .3s; 
+        animation-iteration-count: infinite; 
+        outline: 1px solid transparent;
+    }
+    @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 
+@media (max-width: ${breakpoints.l}px){
+    outline: 1px solid transparent;
+    animation: shake .8s;
+    animation-iteration-count: infinite;
+    background-color: black;
+    color: white;
+    &:hover, 
+    :focus {
+        background-color: white;
+        color: black;
+    }
+    
+}
+`
 export const CartButton = styled.button`
     border-radius: 5px;
     border: 1px solid black;

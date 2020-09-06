@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-
 import StoreContext from '~/context/StoreContext'
 import {
   Grid,
@@ -74,6 +73,10 @@ const ProductGrid = () => {
             <TitleFlexWrapper>
               <Title>{title}</Title>
               {/* <PriceTag>{firstVariant.price}</PriceTag>  */}
+
+              {/* {!available ? null : <PriceTag>{getPrice(firstVariant.price)}</PriceTag>}    */}
+              
+
               <PriceTag>{getPrice(firstVariant.price)}</PriceTag>   
             </TitleFlexWrapper>
           </Product>
